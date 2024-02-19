@@ -9,7 +9,7 @@
     ]
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": "prettier --write --ignore-unknown --allow-empty"
   },
   "dependencies": {
     "enzyme": "^3.11.0",
