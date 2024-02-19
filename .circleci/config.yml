@@ -13,11 +13,11 @@ jobs:
      steps:
        - checkout
        - run: 
-        command: npm install
-        name: Paskages installed
+          command: npm install
+          name: Paskages installed
        - run: 
-        command: npm run test
-        name: Tests Ran
+          command: npm run test
+          name: Tests Ran
   #  hithere:
   #    docker:
   #      - image: cimg/node:21.6.1
