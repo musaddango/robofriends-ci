@@ -1,5 +1,3 @@
-
-
 version: 2.1 
 jobs:
    build:
@@ -23,7 +21,7 @@ jobs:
        - checkout
        - run: echo "Helllooooo!"
 workflows:
-  version: 2.1
+  # version: 2.1
   build-test-and-lint:
     jobs:
       - build
