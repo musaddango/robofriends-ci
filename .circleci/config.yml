@@ -12,8 +12,19 @@ jobs:
        - image: cimg/node:21.6.1
      steps:
        - checkout
-       - run: npm install
-       - run: npm run test
+       - run: 
+        command: npm install
+        name: Install Packages
+       - run: 
+        command: npm run test
+        name: Run Tests
+       - run:
+        command: npm run build
+        name: Build Static Files
+      - persist_to_workspace:
+        root: ~/project
+        paths:
+        - .
    hithere:
      docker:
        - image: cimg/node:21.6.1
