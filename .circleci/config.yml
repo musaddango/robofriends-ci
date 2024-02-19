@@ -1,4 +1,4 @@
-version: 2.1 
+version: 2.1
 
 jobs:
   build:
@@ -13,10 +13,10 @@ jobs:
       - image: cimg/node:21.6.1
     steps:
       - checkout
-      - run: 
+      - run:
           command: npm install
           name: Install Packages
-      - run: 
+      - run:
           command: npm run test
           name: Run Tests
       - run:
@@ -28,10 +28,10 @@ jobs:
             - .
   hithere:
     docker:
-       - image: cimg/node:21.6.1
+      - image: cimg/node:21.6.1
     steps:
-       - checkout
-       - run: echo "Helllooooo!"
+      - checkout
+      - run: echo "Helllooooo!"
 workflows:
   # version: 2.1
   build-test-and-lint:
@@ -41,4 +41,3 @@ workflows:
       - test:
           requires:
             - hithere
-            
